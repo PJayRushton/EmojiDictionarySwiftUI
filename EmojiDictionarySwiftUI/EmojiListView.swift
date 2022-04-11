@@ -16,7 +16,7 @@ struct EmojiListView: View {
     var body: some View {
         NavigationView {
             List($emojiHelper.emojis) { $emoji in
-                NavigationLink(destination: EmojiEditView(emoji: $emoji)) {
+                NavigationLink(destination: EmojiEditView(emoji: $emoji, isNew: false)) {
                     EmojiCell(emoji: emoji)
                 }
             }
